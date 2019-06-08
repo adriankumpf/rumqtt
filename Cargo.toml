@@ -9,55 +9,55 @@ edition = "2018"
 license = "Unlicense"
 
 [dependencies]
-tokio = { version = "^0.1.15", features = [ "codec", "io", "rt-full", "tcp", "timer" ], default-features = false }
-bytes = "0.4"
-futures = "0.1"
-crossbeam-channel = "0.3"
-log = "0.4"
-failure = "0.1"
-derive_more = "0.13"
-base64 = "0.10"
-uuid = {version = "0.7", features = ["serde", "v4"]}
-pretty_env_logger = "0.2"
-mqtt311 = "0.2"
+tokio = { version = "0.1.21", features = [ "codec", "io", "rt-full", "tcp", "timer" ], default-features = false }
+bytes = "0.4.12"
+futures = "0.1.27"
+crossbeam-channel = "0.3.8"
+log = "0.4.6"
+failure = "0.1.5"
+derive_more = "0.14.1"
+base64 = "0.10.1"
+uuid = { version = "0.7.4", features = ["serde", "v4"] }
+pretty_env_logger = "0.3.0"
+mqtt311 = "0.2.0"
 
 [dependencies.native-tls]
-version = "0.2"
+version = "0.2.3"
 optional = true
 
 [dependencies.tokio-tls]
-version = "0.2"
+version = "0.2.1"
 optional = true
 
 [dependencies.tokio-rustls]
-version = "0.9"
+version = "0.9.3"
 optional = true
 
 [dependencies.webpki]
-version = "0.19"
+version = "0.19.1"
 optional = true
 
 [dependencies.jsonwebtoken]
-version = "6.0"
+version = "6.0.1"
 optional = true
 
 [dependencies.chrono]
-version = "0.4"
+version = "0.4.6"
 optional = true
 
 [dependencies.serde]
-version = "1"
+version = "1.0.92"
 optional = true
 
 [dependencies.serde_derive]
-version = "1"
+version = "1.0.92"
 optional = true
 
 [dev-dependencies]
-envy = "0.3"
-serde = "1"
-serde_derive = "1"
-base64 = "0.10"
+envy = "0.4.0"
+serde = "1.0.92"
+serde_derive = "1.0.92"
+base64 = "0.10.1"
 
 [features]
 default = ["rustls", "jwt"]
